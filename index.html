@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牙科療程語音播放</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>選擇療程階段以播放語音</h1>
+
+        <!-- 導覽列 -->
+        <div class="navbar">
+            <button class="navButton" data-category="before">療程前</button>
+            <button class="navButton" data-category="prepare">備診</button>
+            <button class="navButton" data-category="during">療程中</button>
+            <button class="navButton" data-category="after">療程結束</button>
+            <button class="navButton" data-category="followup">療程後追蹤</button>
+        </div>
+
+        <!-- 按鈕列表 -->
+        <div class="button-container">
+            <!-- 療程前按鈕 -->
+            <div class="button-group" id="before" style="display: none;">
+                <button class="playButton" data-audio="sounds/veneer.aac">療程前說明 1</button>
+                <button class="playButton" data-audio="audio/procedure2.mp3">療程前說明 2</button>
+            </div>
+
+            <!-- 備診按鈕 -->
+            <div class="button-group" id="prepare" style="display: none;">
+                <button class="playButton" data-audio="sounds/veneer.aac">備診說明 1</button>
+                <button class="playButton" data-audio="audio/procedure2.mp3">備診說明 2</button>
+            </div>
+
+            <!-- 療程中按鈕 -->
+            <div class="button-group" id="during" style="display: none;">
+                <button class="playButton" data-audio="audio/procedure3.mp3">療程中說明 1</button>
+                <button class="playButton" data-audio="audio/procedure4.mp3">療程中說明 2</button>
+            </div>
+
+            <!-- 療程結束按鈕 -->
+            <div class="button-group" id="after" style="display: none;">
+                <button class="playButton" data-audio="audio/procedure5.mp3">療程結束說明 1</button>
+                <button class="playButton" data-audio="audio/procedure6.mp3">療程結束說明 2</button>
+            </div>
+
+            <!-- 療程後追蹤按鈕 -->
+            <div class="button-group" id="followup" style="display: none;">
+                <button class="playButton" data-audio="audio/procedure7.mp3">療程後追蹤說明 1</button>
+                <button class="playButton" data-audio="audio/procedure8.mp3">療程後追蹤說明 2</button>
+            </div>
+        </div>
+
+        <audio id="audioPlayer" controls style="display: none;">
+            <source id="audioSource" src="" type="audio/mpeg">
+            您的瀏覽器不支援音頻播放。
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
