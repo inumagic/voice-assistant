@@ -51,7 +51,7 @@ h1 {
 .button-group {
     display: none;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 button {
