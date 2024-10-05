@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育訓練 - 牙科療程</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>牙科教育訓練</h1>
+
+        <!-- 導覽列 -->
+        <div class="navbar">
+            <button class="navButton" onclick="location.href='index.html'">語音助手</button>
+            <button class="navButton" data-category="gp">假牙</button>
+            <button class="navButton" data-category="surgery">手術</button>
+            <button class="navButton" data-category="ortho">矯正</button>
+        </div>
+
+        <!-- 按鈕列表 -->
+        <div class="button-container">
+            <!-- 基礎知識按鈕 -->
+            <div class="button-group" id="gp" style="display: none;">
+                <button class="playButton" data-media='[{"type": "audio", "src": "sounds/attipr.aac"}, {"type": "video", "src": "videos/analog-I-imp.mp4"}]'>全瓷牙冠</button>
+                <button class="playButton" data-audio="sounds/tooth_structure.aac">牙齒結構</button>
+            </div>
+
+            <!-- 療程介紹按鈕 -->
+            <div class="button-group" id="surgery" style="display: none;">
+                <button class="playButton" data-media='[ {"type": "video", "src": "videos/analog-I-imp.mp4"}]'>植牙印模</button>
+                <button class="playButton" data-audio="sounds/implants_intro.aac">植牙介紹</button>
+                <button class="playButton" data-audio="sounds/crowns_intro.aac">全瓷冠介紹</button>
+            </div>
+
+            <!-- 安全指導按鈕 -->
+            <div class="button-group" id="ortho" style="display: none;">
+                <button class="playButton" data-audio="sounds/safety_instructions.aac">療程安全指導</button>
+                <button class="playButton" data-audio="sounds/post_op_care.aac">術後護理須知</button>
+            </div>
+        </div>
+
+        <audio id="audioPlayer" controls style="display: none;">
+            <source id="audioSource" src="" type="audio/mpeg">
+            您的瀏覽器不支援音頻播放。
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
