@@ -38,7 +38,7 @@ $(document).ready(function () {
             } else if (currentMedia.type === "youtube") {
                 playYouTube(currentMedia.src);
             }
-            currentPlayingIndex++;
+            currentPlayingIndex++; // 播放完當前項目後，自增索引
         }
     }
 
@@ -58,7 +58,7 @@ $(document).ready(function () {
         };
     }
 
-    // 播放影片
+    // 播放本地影片
     function playVideo(videoSrc) {
         const $videoContainer = $('<div>').addClass('video-container text-center my-4');
         const $videoPlayer = $('<video>', {
@@ -82,8 +82,8 @@ $(document).ready(function () {
 
         // 當影片結束後，自動播放下一個
         $videoPlayer.on('ended', function () {
-            $videoContainer.remove();
-            playNext();
+            $videoContainer.remove(); // 移除當前影片容器
+            playNext(); // 播放下一個項目
         });
     }
 
@@ -113,5 +113,11 @@ $(document).ready(function () {
 
         $videoContainer.append($iframe).append($closeButton);
         $('body').append($videoContainer);
+
+        // 假設 YouTube 影片自動播放結束後繼續播放下一個文件
+        $iframe.on('ended', function () {
+            $videoContainer.remove(); // 移除當前 YouTube 容器
+            playNext(); // 播放下一個項目
+        });
     }
 });
