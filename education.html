@@ -8,6 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* 使用 CSS Grid 系統排列按鈕 */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 每列最小寬度200px，自適應排列 */
+            gap: 10px;
+        }
+    </style>
 </head>
 
 <body class="bg-light">
@@ -27,39 +36,24 @@
         <!-- 按鈕列表 -->
         <div class="button-container">
             <!-- 假牙按鈕 -->
-            <div class="button-group row g-3" id="gp" style="display: none;">
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "youtube", "src": "https://www.youtube.com/embed/n8NVpaegslE"}]'>教刷牙影片</button>
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "video", "src": "videos/I-handpiece.mp4"},{"type": "video", "src": "videos/I-handpiece2.mp4"},{"type": "video", "src": "videos/I-handpiece3.mp4"}]'>植牙手機</button>
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "video", "src": "videos/pre-inlay1.mp4"},{"type": "video", "src": "videos/pre-inlay2.mp4"},{"type": "video", "src": "videos/pre-inlay3.mp4"},{"type": "video", "src": "videos/pre-inlay4.mp4"}]'>瓷塊處理</button>
-
-                </div>
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/tooth_structure.aac"}]'>牙齒結構</button>
-                </div>
+            <div class="button-group grid-container" id="gp" style="display: none;">
+                <button class="btn btn-primary playButton" data-media='[{"type": "youtube", "src": "https://www.youtube.com/embed/n8NVpaegslE"}]'>教刷牙影片</button>
+                <button class="btn btn-primary playButton" data-media='[{"type": "video", "src": "videos/I-handpiece.mp4"},{"type": "video", "src": "videos/I-handpiece2.mp4"},{"type": "video", "src": "videos/I-handpiece3.mp4"}]'>植牙手機</button>
+                <button class="btn btn-primary playButton" data-media='[{"type": "video", "src": "videos/pre-inlay1.mp4"},{"type": "video", "src": "videos/pre-inlay2.mp4"},{"type": "video", "src": "videos/pre-inlay3.mp4"},{"type": "video", "src": "videos/pre-inlay4.mp4"}]'>瓷塊處理</button>
+                <button class="btn btn-primary playButton" data-media='[{"type": "audio", "src": "sounds/tooth_structure.aac"}]'>牙齒結構</button>
             </div>
 
             <!-- 手術按鈕 -->
-            <div class="button-group row g-3" id="surgery" style="display: none;">
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "video", "src": "videos/analog-I-imp.mp4"}]'>植牙印模</button>
-                </div>
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/implants_intro.aac"}]'>植牙介紹</button>
-                </div>
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/crowns_intro.aac"}]'>全瓷冠介紹</button>
-                </div>
+            <div class="button-group grid-container" id="surgery" style="display: none;">
+                <button class="btn btn-primary playButton" data-media='[{"type": "video", "src": "videos/analog-I-imp.mp4"}]'>植牙印模</button>
+                <button class="btn btn-primary playButton" data-media='[{"type": "audio", "src": "sounds/implants_intro.aac"}]'>植牙介紹</button>
+                <button class="btn btn-primary playButton" data-media='[{"type": "audio", "src": "sounds/crowns_intro.aac"}]'>全瓷冠介紹</button>
             </div>
 
             <!-- 矯正按鈕 -->
-            <div class="button-group row g-3" id="ortho" style="display: none;">
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/safety_instructions.aac"}]'>療程安全指導</button>
-                </div>
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/post_op_care.aac"}]'>術後護理須知</button>
-                </div>
+            <div class="button-group grid-container" id="ortho" style="display: none;">
+                <button class="btn btn-primary playButton" data-media='[{"type": "audio", "src": "sounds/safety_instructions.aac"}]'>療程安全指導</button>
+                <button class="btn btn-primary playButton" data-media='[{"type": "audio", "src": "sounds/post_op_care.aac"}]'>術後護理須知</button>
             </div>
         </div>
 
