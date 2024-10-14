@@ -19,14 +19,14 @@ body {
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-size: 24px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .navButton {
@@ -45,17 +45,17 @@ h1 {
 }
 
 .button-container {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .button-group {
     display: none;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
     background-color: #007bff;
@@ -70,6 +70,6 @@ button:hover {
 }
 
 audio {
-    margin-top: 20px;
+    margin-top: 5px;
     width: 100%;
 }
