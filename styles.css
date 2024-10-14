@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -12,32 +10,39 @@ body {
 
 .container {
     background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
+    padding: 15px 20px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 100%;
+    max-width: 600px; /* 控制最大宽度 */
 }
 
 h1 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 24px;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 5px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* 允许导航按钮换行 */
 }
 
 .navButton {
-    padding: 10px 20px;
+    padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    /* background-color: #007bff; */
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+    flex-grow: 1;
+    text-align: center;
+    margin: 5px; /* 使按钮之间有一点空间 */
 }
 
 .navButton:hover {
@@ -45,7 +50,7 @@ h1 {
 }
 
 .button-container {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .button-group {
@@ -56,7 +61,7 @@ h1 {
 
 button {
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: 14px; /* 调整按钮字体大小以适应手机 */
     cursor: pointer;
     background-color: #007bff;
     color: #fff;
@@ -70,6 +75,37 @@ button:hover {
 }
 
 audio {
-    margin-top: 5px;
+    margin-top: 10px;
     width: 100%;
+}
+
+/* 針對手機屏幕的優化 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px; /* 調整標題字體大小 */
+        margin-bottom: 15px;
+    }
+
+    .navButton {
+        font-size: 14px; /* 調整導航按鈕字體 */
+        padding: 8px 12px; /* 縮小按鈕填充 */
+    }
+
+    button {
+        font-size: 14px; /* 調整主按鈕字體 */
+        padding: 8px 12px; /* 縮小主按鈕填充 */
+    }
+
+    .container {
+        padding: 10px 15px;
+        width: 95%; /* 增加容器寬度占比，適應手機 */
+    }
+
+    .button-group {
+        gap: 4px; /* 調整按鈕間距 */
+    }
+
+    audio {
+        margin-top: 10px;
+    }
 }
