@@ -6,23 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>牙科療程語音播放</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- 加载 YouTube IFrame API -->
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <style>
-        /* 样式设置 */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-        }
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>牙科療程語音播放</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- 添加 CSS -->
     <style>
@@ -73,83 +57,16 @@
     <div class="container py-5">
         <h1 class="text-center mb-5">選擇療程階段以播放語音</h1>
 
-        <!-- 導覽列 -->
+         <!-- 導覽列 -->
         <div class="d-flex justify-content-center mb-4">
-            <div class="btn-group" role="group" aria-label="療程階段">
-                <button class="btn btn-primary navButton" data-category="before">療程前</button>
-                <button class="btn btn-primary navButton" data-category="prepare">備診</button>
-                <button class="btn btn-primary navButton" data-category="during">療程中</button>
-                <button class="btn btn-primary navButton" data-category="after">療程結束</button>
-                <button class="btn btn-primary navButton" data-category="followup">療程後</button>
-                <button class="btn btn-secondary" onclick="location.href='education.html'">教育訓練</button>
+            <div class="btn-group" role="group" aria-label="療程階段" id="navContainer">
+                <!-- 按鈕將動態生成並放在這裡 -->
             </div>
         </div>
 
         <!-- 按鈕列表 -->
-        <div class="button-container">
-            <!-- 療程前按鈕 -->
-            <div class="button-group row g-3" id="before" style="display: none;">
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/before(fd).aac"}]'>療程前-櫃檯</button>
-                </div>
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/before(clinic).aac"}]'>療程前－診間</button>
-                </div>
-            </div>
-
-            <!-- 備診按鈕：使用網格佈局 -->
-            <div class="button-group grid-container" id="prepare" style="display: none;">
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/veneer.aac"}]'>黏貼片</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/I_FPC.aac"}]'>黏植牙全瓷冠</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/inlay_imp.aac"}]'>3D齒雕印模</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/button.aac"}]'>黏button</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/CLS.aac"}]'>CLS</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/ext.aac"}]'>拔牙</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/inlay.aac"}]'>3D齒雕</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/FPC_cementation.aac"}]'>黏全瓷冠</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/frenum.aac"}]'>舌繫帶</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/I_imp.aac"}]'>植牙印模</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/imp.aac"}]'>印模</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/isq.aac"}]'>ISQ</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/jiandanpu.aac"}]'>簡單舖</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/npa.aac"}]'>NPA</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/od.aac"}]'>OD補牙</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/attipr.aac"}]'>ATT+IPR</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/perio_laser.aac"}]'>Perio Laser 牙周雷射</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/prep.aac"}]'>車牙prepare</button>
-                <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/guding.aac"}]'>骨釘</button>
-            </div>
-
-            <!-- 其他按鈕組保持不變 -->
-             <!-- 療程中按鈕 -->
-            <div class="button-group row g-3" id="during" style="display: none;">
-                <div class="col-12">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/during.aac"}]'>療程中</button>
-                </div>
-            </div>
-
-            <!-- 療程結束按鈕 -->
-            <div class="button-group row g-3" id="after" style="display: none;">
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/after(fdgit).aac"}]'>療程結束-櫃檯</button>
-                </div>
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/after(clinic).aac"}]'>療程結束-診間</button>
-                </div>
-            </div>
-
-            <!-- 療程後按鈕 -->
-            <div class="button-group row g-3" id="followup" style="display: none;">
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/PS1.aac"}]'>術後注意事項</button>
-                </div>
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/PS2.aac"}]'>補骨術後注意事項</button>
-                </div>
-                <div class="col-12 col-md-6">
-                    <button class="btn btn-primary w-100 playButton" data-media='[{"type": "audio", "src": "sounds/PS3.aac"}]'>IPR後注意事項</button>
-                </div>
-            </div>
+        <div class="button-container" id="buttonContainer">
+            <!-- 按鈕將動態生成並放在這裡 -->
         </div>
 
 
@@ -163,7 +80,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 

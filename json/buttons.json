@@ -1,0 +1,245 @@
+{
+    "categories": [
+        {
+            "id": "before",
+            "buttons": [
+                {
+                    "text": "療程前-櫃檯",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/before(fd).aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "療程前－診間",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/before(clinic).aac"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "prepare",
+            "buttons": [
+                {
+                    "text": "黏貼片",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/veneer.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "CLS",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/CLS.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "拔牙",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/ext.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "3D齒雕",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/inlay.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "黏全瓷冠",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/FPC_cementation.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "舌繫帶",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/frenum.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "植牙印模",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/I_imp.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "印模",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/imp.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "ISQ",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/isq.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "簡單舖",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/jiandanpu.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "NPA",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/npa.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "OD補牙",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/od.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "ATT+IPR",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/attipr.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "Perio Laser 牙周雷射",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/perio_laser.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "車牙prepare",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/prep.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "骨釘",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/guding.aac"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "during",
+            "buttons": [
+                {
+                    "text": "療程中",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/during.aac"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "after",
+            "buttons": [
+                {
+                    "text": "療程結束-櫃檯",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/after(fd).aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "療程結束-診間",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/after(clinic).aac"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "followup",
+            "buttons": [
+                {
+                    "text": "術後注意事項",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/PS1.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "補骨術後注意事項",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/PS2.aac"
+                        }
+                    ]
+                },
+                {
+                    "text": "IPR後注意事項",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/PS3.aac"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
