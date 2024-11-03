@@ -1,0 +1,16 @@
+{
+    "prepare": [
+      {
+        "text": "黏貼片",
+        "media": [{"type": "audio", "src": "sounds/veneer.aac"}]
+      },
+      {
+        "text": "黏植牙全瓷冠",
+        "media": [{"type": "audio", "src": "sounds/I_FPC.aac"}]
+      },
+      {
+        "text": "3D齒雕印模",
+        "media": [{"type": "audio", "src": "sounds/inlay_imp.aac"}]
+      }
+    ]
+  }

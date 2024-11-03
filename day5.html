@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>教育訓練</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; 
+      text-align: center;
+      padding: 20px;
+    }
+    video, img {
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto;
+      display: block;
+    }
+    #continueBtn {
+      display: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>教育訓練 - Day 5</h1>
+
+  <video id="videoPlayer" controls style="display:none;">
+    <source src="" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <img id="imageDisplay" src="" alt="圖片顯示" style="display:none;">
+
+  <!-- 繼續按鈕 -->
+  <button id="continueBtn">繼續播放</button>
+
+  <script>
+    // 混合播放的項目列表（影片和圖片）
+    const mediaItems = [
+      { type: 'video', src: 'videos/pre-inlay1.mp4' },
+      { type: 'video', src: 'videos/pre-inlay2.mp4' },
+      { type: 'image', src: 'images/break-image.jpg' },  // 圖片
+      { type: 'video', src: 'videos/pre-inlay3.mp4' },
+      { type: 'video', src: 'videos/pre-inlay4.mp4' },
+      { type: 'image', src: 'images/end-image.jpg' }     // 最後一張圖片
+    ];
+
+    let currentMediaIndex = 0;
+
+    const videoPlayer = document.getElementById('videoPlayer');
+    const imageDisplay = document.getElementById('imageDisplay');
+    const continueBtn = document.getElementById('continueBtn');
+
+    function playNextMedia() {
+      if (currentMediaIndex >= mediaItems.length) {
+        // 如果所有項目播放完畢
+        alert("播放完畢！");
+        return;
+      }
+
+      const currentMedia = mediaItems[currentMediaIndex];
+
+      // 如果當前是影片
+      if (currentMedia.type === 'video') {
+        videoPlayer.src = currentMedia.src;
+        videoPlayer.style.display = 'block';  // 顯示影片
+        imageDisplay.style.display = 'none';  // 隱藏圖片
+        continueBtn.style.display = 'none';   // 隱藏按鈕
+        videoPlayer.play();
+      }
+      
+      // 如果當前是圖片
+      else if (currentMedia.type === 'image') {
+        imageDisplay.src = currentMedia.src;
+        imageDisplay.style.display = 'block';  // 顯示圖片
+        videoPlayer.style.display = 'none';    // 隱藏影片
+        continueBtn.style.display = 'block';   // 顯示按鈕
+      }
+    }
+
+    // 當影片結束時，播放下一個媒體
+    videoPlayer.addEventListener('ended', function() {
+      currentMediaIndex++;
+      playNextMedia();
+    });
+
+    // 當按下「繼續播放」按鈕時，播放下一個媒體
+    continueBtn.addEventListener('click', function() {
+      currentMediaIndex++;
+      playNextMedia();
+    });
+
+    // 初始化播放第一個媒體
+    playNextMedia();
+  </script>
+</body>
+</html>

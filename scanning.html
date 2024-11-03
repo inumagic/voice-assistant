@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>口腔掃描系統教學</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>口腔掃描系統教學</h1>
+        <nav>
+            <button onclick="showVideos('3shape')">3Shape 教學</button>
+            <button onclick="showVideos('shining')">Shining 教學</button>
+        </nav>
+    </header>
+    <main>
+        <section id="videos">
+            <h2 id="device-title">請選擇一台掃描儀</h2>
+            <div class="video-container" id="video-list">
+                <!-- 影片列表將由 JavaScript 動態添加 -->
+            </div>
+        </section>
+    </main>
+    <script src="scanning-script.js"></script>
+</body>
+</html>

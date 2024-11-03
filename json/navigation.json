@@ -29,5 +29,11 @@
         "label": "教育訓練",
         "type": "external",
         "url": "education.html"
+    },
+    {
+        "id": "scanning",
+        "label": "教育訓練 - 口腔掃描",
+        "type": "external",
+        "url": "scanning.html"
     }
 ]
