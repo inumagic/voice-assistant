@@ -1,0 +1,33 @@
+[
+    {
+        "id": "before",
+        "label": "療程前",
+        "type": "internal"
+    },
+    {
+        "id": "prepare",
+        "label": "備診",
+        "type": "internal"
+    },
+    {
+        "id": "during",
+        "label": "療程中",
+        "type": "internal"
+    },
+    {
+        "id": "after",
+        "label": "療程結束",
+        "type": "internal"
+    },
+    {
+        "id": "followup",
+        "label": "療程後",
+        "type": "internal"
+    },
+    {
+        "id": "education",
+        "label": "教育訓練",
+        "type": "external",
+        "url": "education.html"
+    }
+]
