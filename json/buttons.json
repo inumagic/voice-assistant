@@ -44,6 +44,16 @@
                         }
                     ]
                 },
+
+                  {
+                    "text": "植牙牙冠裝牙",
+                    "media": [
+                        {
+                            "type": "audio",
+                            "src": "sounds/IFPC.mp3"
+                        }
+                    ]
+                },
                 {
                     "text": "拔牙",
                     "media": [
